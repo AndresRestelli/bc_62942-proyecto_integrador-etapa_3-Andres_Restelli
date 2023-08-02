@@ -1,0 +1,29 @@
+<div class="contact_container">
+
+    <h1>Dejanos tu consulta</h1>
+        <p>Hola! Muchas gracias por querer ponerte en contacto con nosotros.</p>
+    
+    <form action="contacto" class="contact_form_container">      
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"  required minlength="3" maxlength="20" autocomplete="of" autofocus>
+        </div>
+        
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required  minlength="7" autocomplete="of">
+        </div>
+        
+        <div>
+            <div>
+                <label for="comentarios">Comentarios:</label>
+                <textarea id="comentarios" name="comentarios" rows="10" cols="40" ></textarea>
+            </div>
+            
+            <div class="contact-btn-form-send">
+                <!--<input type="submit" value="Enviar" disabled>  -->
+                <button id="boton">Enviar</button>
+            </div>
+            
+        </form>
+    </div>

@@ -1,0 +1,118 @@
+<video id="video-background" autoplay muted loop>
+        <source src="/video/create_product.mp4" type="video/mp4">
+  </video>
+
+<h1>Alta de productos!</h1>
+
+<form action="/upload" autocomplete="off" class="registration_of_products" method="post"  enctype="multipart/form-data" >
+        <input type="submit" id="btn-get-one-product" class="btn-get-one-product" value="Buscar un producto">
+        <div class="form-create-contanier">
+
+            <label for="title">Nombre:</label>
+            <input type="text" id="title" name="title" autofocus required minlength="2" maxlength="70">
+
+            <div>
+                <label for="precio">Precio:</label>
+                <input type="number" min="1" max="99999"  step="0.01" id="price" name="price" required>
+            </div>
+            
+            <div>
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" name="stock" min="0" max="99999" step="" required>
+            </div>
+            
+            <div>
+
+               <label for="brand">Marca:</label>
+               <input type="text" list="brand" id="brands">
+            <datalist id="brand" required>
+                <option value="Lego"></option>
+                <option value="Bandai Namco"></option>
+                <option value="Fisher-Price"></option>
+                <option value="One Piece"></option>
+                <option value="POP!"></option>
+                <option value="Barbie"></option>
+                <option value="Gundam"></option>
+                <option value="Hasbro"></option>
+                <option value="My Little Pony"></option>
+                <option value="Hot Wheels"></option>
+            </datalist>
+        </div>
+            
+        <div>
+            <label for="category">Categoría:</label>
+            <input type="text" list="category" id="categorys">
+            <datalist id="category" required>
+                <option value="Inflables y pileta"></option>
+                <option value="Autos a control remoto"></option>
+                <option value="Muñecos"></option>
+                <option value="Muñecos Anime"></option>
+                <option value="Armables"></option>
+                <option value="Con ruedas"></option>
+                <option value="Para el baño"></option>
+                <option value="Animales y dinosaurios"></option>
+                <option value="Sets de bloques"></option>
+                <option value="Convertibles y transformers"></option>
+            </datalist>
+        </div>
+
+        <div>
+            <label for="shortDescription">Descripcion corta:</label>        
+            <input type="text" id="shortDescription" name="shortDescription" minlength="10" maxlength="200" placeholder="Dejanos una breve referencia" required>
+        </div>
+        <div>
+            <label for="description">Descripcion larga:</label>
+            <textarea id="description" name="description" rows="10" cols="65" required minlength="10" maxlength="2000"></textarea>
+        </div>
+        
+        <fieldset class="field-age">  
+            <legend>Edad</legend>
+            <div class="field-age-div">
+
+                <label for="ageFrom">Desde:</label>
+                <input type="number" id="ageFrom" name="ageFrom" min="0" max="100" required>
+                <label for="years">Meses</label>
+                <input type="radio" id="ageFromMonthUnit" name="AgeFromUnit" value="meses" checked>
+                <label for="months">Años</label><br>
+                <input type="radio" id="ageFromYearUnit" name="AgeFromUnit" value="años">
+                
+                
+            </div>
+            
+            <div class="field-age-div">
+                <label for="ageUpTo">Hasta:</label>
+                <input type="number" id="ageUpTo" name="ageUpTo" min="0" max="100" required>
+                <label for="years">Meses</label>
+                <input type="radio" id="ageUpToMonthUnit" name="AgeUpToUnit" value="meses" checked>
+                <label for="months">Años</label><br>
+                <input type="radio" id="ageUpToYearUnit" name="AgeUpToUnit" value="años">
+            </div>
+        </fieldset>
+        
+        <div class="inline-block-container">
+            <input type="checkbox" id="freeShipping" name="freeShipping" >
+            <label for="freeShipping">Envío sin cargo</label>
+        </div>
+                
+        <fieldset class="field-image">
+            <legend>Imagen</legend>
+            <div>
+                <label for="image">Subi una imagen:</label>
+                <input type="file" accept="image/*" id="image" name="image" required>
+            </div>
+        </fieldset>
+            
+            <div class="botones-alta">
+                <input  type="submit" id="btn-create"value="Alta de producto">
+                <input  type="submit" id="btn-edit"value="Editar">
+                <input  type="submit" id="btn-delete"value="Eliminar">
+                <input  type="reset"  value="Restablecer los datos">
+            </div>
+        
+    </div>
+    </form>
+
+    <section class="section-products-table">
+        <h2>Listado de productos</h2>
+        <div class="products-table-container"></div>
+    </section>
